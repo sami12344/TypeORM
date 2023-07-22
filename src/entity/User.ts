@@ -1,7 +1,14 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm'
+import { Profile } from './Profile'
 
 @Entity()
-export class User extends BaseEntity {
+export class User {
   @PrimaryGeneratedColumn()
   id: number
   @Column()
@@ -10,4 +17,7 @@ export class User extends BaseEntity {
   email: string
   @Column()
   phone: string
+  @OneToOne(() => Profile)
+  @JoinColumn()
+  profile: Profile
 }

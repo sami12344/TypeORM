@@ -1,13 +1,13 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
-export class Card extends BaseEntity {
+export class Profile {
   @PrimaryGeneratedColumn()
   id: number
   @Column()
-  type: string
+  gender: string
   @Column()
-  category: string
-  @Column()
-  phone: string
+  photo: string
+  
+
 }
