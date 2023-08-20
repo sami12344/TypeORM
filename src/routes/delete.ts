@@ -5,10 +5,11 @@ import { User } from '../entity/User'
 const deleteRouter = express.Router()
 
 deleteRouter.get('/', async (req, res) => {
-  const userRepo = await AppDataSource.getRepository(User)
- 
-const deleteRecord = await userRepo.delete(2)
+  const userRepo = AppDataSource.getRepository(User)
+
+  const deleteRecord = await userRepo.delete(1)
   res.json(deleteRecord)
 })
 
 export default deleteRouter
+ 

@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class Profile {
@@ -9,5 +9,8 @@ export class Profile {
   @Column()
   photo: string
   
-
+  @OneToOne(()=> Profile)
+  @JoinColumn()
+  profile:Profile
 }
+ 

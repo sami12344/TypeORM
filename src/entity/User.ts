@@ -11,8 +11,8 @@ import { Profile } from './Profile'
 export class User {
   @PrimaryGeneratedColumn()
   id: number
-  @Column()
-  name: string
+  @Column({name:"name"})
+  person: string
   @Column()
   email: string
   @Column()

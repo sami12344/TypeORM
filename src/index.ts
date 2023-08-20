@@ -20,7 +20,7 @@ app.use('/create', createRouter)
 
 app.use('/update', updateRouter)
 
-app.use('/findOne',findOneRouter)
+app.use(`/findOne`,findOneRouter)
 const main = async () => {
   try {
     await AppDataSource.initialize()

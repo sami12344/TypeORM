@@ -6,7 +6,7 @@ const findOneRouter = express.Router()
 
 findOneRouter.get('/', async (req, res) => {
   const userRepo = await AppDataSource.getRepository(User)
-const reacord = await userRepo.findOne({where: {name:"Sami Islam"}})
+const reacord = await userRepo.findOne({where: {person:"Sami Islam"}})
   res.json(reacord)
 })
 
