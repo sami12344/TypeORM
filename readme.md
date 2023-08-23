@@ -17,7 +17,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage](#usage) 
 - [Configuration](#configuration)
 - [Database Setup](#database-setup)
 - [Models](#models)
