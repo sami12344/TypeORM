@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/sami12344/TypeORM/assets/77746252/925e07e3-3b2e-4dc3-a4d1-6632e08a061a" alt="Project Logo" width="100%"/>
+  <img src="https://github.com/sami12344/TypeORM/assets/77746252/211e64dc-0897-4b30-914e-b0fb69d62e11" alt="Project Logo" width="100%"/>
 </div>
 
 
