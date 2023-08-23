@@ -9,7 +9,7 @@ export class Profile {
   @Column()
   photo: string
   
-  @OneToOne(()=> Profile)
+  @OneToOne(()=> Profile, {cascade:true, eager:true})
   @JoinColumn()
   profile:Profile
 }

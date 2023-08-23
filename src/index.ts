@@ -3,6 +3,7 @@ import express from 'express'
 import { AppDataSource } from './database/config'
 import deleteRouter from './routes/delete'
 import readRouter from './routes/read'
+import relationreadRouter from './routes/relation/read'
 import createRouter from './routes/create'
 import updateRouter from './routes/update'
 import findOneRouter from './routes/findOne'
@@ -13,6 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/read', readRouter)
+app.use('/relation-read', relationreadRouter)
 
 app.use('/delete', deleteRouter)
 
