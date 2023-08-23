@@ -12,23 +12,26 @@
 
 "TypeORM is a feature-rich Object-Relational Mapping (ORM) library for TypeScript and JavaScript. It simplifies database interactions by providing a seamless way to map TypeScript/JavaScript classes to database tables, enabling developers to work with databases using familiar programming paradigms. With support for various databases and advanced features like migrations, repositories, and custom queries, TypeORM streamlines the process of managing and querying data while maintaining strong typing and type safety."
 
-## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage) 
-- [Configuration](#configuration)
-- [Database Setup](#database-setup)
-- [Models](#models)
-- [Repositories](#repositories)
-- [Migrations](#migrations)
-- [Seed Data](#seed-data)
-- [Queries](#queries)
-- [Advanced Tips](#advanced-tips)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [License](#license)
+<div align="center">
+ 
+
+ • [Introduction](#introduction)
+ • [Features](#features)
+ • [Installation](#installation)
+ • [Usage](#usage)
+ • [Configuration](#configuration)
+ • [Database Setup](#database-setup)
+ • [Models](#models)
+ • [Repositories](#repositories)
+ • [Migrations](#migrations)
+ • [Seed Data](#seed-data)
+ • [Queries](#queries)
+ • [Advanced Tips](#advanced-tips)
+ • [Contributing](#contributing)
+ • [Authors](#authors)
+ • [License](#license)
+</div>
 
 ## Introduction
 
