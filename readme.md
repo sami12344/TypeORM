@@ -1,6 +1,7 @@
 <div align="center">
-  <img src="https://github.com/sami12344/TypeORM/assets/77746252/c004f9a9-b818-4be9-b39c-e607310d65c7" alt="Project Logo" width="100%"/>
+  <img src="https://github.com/sami12344/TypeORM/assets/77746252/925e07e3-3b2e-4dc3-a4d1-6632e08a061a" alt="Project Logo" width="100%"/>
 </div>
+
 
 
 
