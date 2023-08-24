@@ -1,7 +1,8 @@
-import express from 'express'
-import { Profile } from '../../entity/Profile'
-import { AppDataSource } from '../../database/config'
-import { User } from '../../entity/User'
+import express from 'express';
+import { AppDataSource } from 'src/database/config';
+import { Profile } from 'src/entity/Profile';
+import { User } from 'src/entity/User';
+
 
 const createRouter = express.Router()
 

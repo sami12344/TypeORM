@@ -8,9 +8,6 @@ export class Profile {
   gender: string
   @Column()
   photo: string
-  
-  @OneToOne(()=> Profile, {cascade:true, eager:true})
-  @JoinColumn()
-  profile:Profile
+ 
 }
  

@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
-import { configDotenv } from "dotenv";
-configDotenv()
+
+ 3
 export const AppDataSource = new DataSource({
   type: 'mysql',
   host: '127.0.0.1',

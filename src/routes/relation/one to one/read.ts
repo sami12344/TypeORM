@@ -1,6 +1,6 @@
-import express from 'express'
-import { AppDataSource } from '../../database/config'
-import { User } from '../../entity/User'
+import express from 'express';
+import { AppDataSource } from 'src/database/config';
+import { User } from 'src/entity/User';
 
 const readRouter = express.Router()
 
