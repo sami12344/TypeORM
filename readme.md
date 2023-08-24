@@ -2,35 +2,30 @@
   <img src="https://github.com/sami12344/TypeORM/assets/77746252/211e64dc-0897-4b30-914e-b0fb69d62e11" alt="Project Logo" width="100%"/>
 </div>
 
-
-
-
 <div align="center">
  <h1>TypeORM</h1>
-</div>
-
 
 "TypeORM is a feature-rich Object-Relational Mapping (ORM) library for TypeScript and JavaScript. It simplifies database interactions by providing a seamless way to map TypeScript/JavaScript classes to database tables, enabling developers to work with databases using familiar programming paradigms. With support for various databases and advanced features like migrations, repositories, and custom queries, TypeORM streamlines the process of managing and querying data while maintaining strong typing and type safety."
 
-
+</div>
 <div align="center">
- 
 
- • [Introduction](#introduction)
- • [Features](#features)
- • [Installation](#installation)
- • [Usage](#usage)
- • [Configuration](#configuration)
- • [Database Setup](#database-setup)
- • [Models](#models)
- • [Repositories](#repositories)
- • [Migrations](#migrations)
- • [Seed Data](#seed-data)
- • [Queries](#queries)
- • [Advanced Tips](#advanced-tips)
- • [Contributing](#contributing)
- • [Authors](#authors)
- • [License](#license)
+• [Introduction](#introduction)
+• [Features](#features)
+• [Installation](#installation)
+• [Usage](#usage)
+• [Configuration](#configuration)
+• [Database Setup](#database-setup)
+• [Models](#models)
+• [Repositories](#repositories)
+• [Migrations](#migrations)
+• [Seed Data](#seed-data)
+• [Queries](#queries)
+• [Advanced Tips](#advanced-tips)
+• [Contributing](#contributing)
+• [Authors](#authors)
+• [License](#license)
+
 </div>
 
 ## Introduction
@@ -57,7 +52,6 @@ TypeORM is all about **productivity** and **type safety**. Say goodbye to manual
 In this README, we'll explore how to get started with TypeORM, from installation and configuration to building models, performing queries, and optimizing your workflow. Whether you're building a small web app or a large-scale enterprise solution, TypeORM is your go-to companion for efficient, type-safe, and elegant database management.
 
 Let's dive in and unleash the true potential of TypeORM in your projects!
-
 
 ## Features
 
@@ -97,7 +91,6 @@ Join a thriving community of developers who contribute to and benefit from TypeO
 
 TypeORM is more than a tool; it's a partner that empowers you to build scalable, maintainable, and efficient database-driven applications. From startups to enterprises, TypeORM's features adapt to your project's needs, boosting your development productivity and enhancing the quality of your codebase.
 
-
 ## Installation
 
 To get started with TypeORM in your project, follow these simple steps:
@@ -123,15 +116,15 @@ To get started with TypeORM in your project, follow these simple steps:
    Define your first entity by creating a TypeScript class. An entity represents a table in your database. You can use decorators to specify columns, relationships, and more. Here's a simple example:
 
    ```typescript
-   import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+   import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
    @Entity()
    class User {
      @PrimaryGeneratedColumn()
-     id: number;
+     id: number
 
      @Column()
-     username: string;
+     username: string
 
      // ... other columns and relationships
    }
@@ -142,7 +135,6 @@ To get started with TypeORM in your project, follow these simple steps:
    Now you're ready to use TypeORM! Import the required functions from TypeORM to create repositories, perform database operations, and manage your entities.
 
 That's it! You're set up to work with TypeORM in your project. For more advanced usage and configuration options, check out the [TypeORM documentation](https://typeorm.io/).
-
 
 Feel free to adapt and modify this installation section according to your project's requirements and preferred level of detail.
 
@@ -155,15 +147,15 @@ TypeORM makes working with databases a breeze, providing you with an intuitive a
 To create a new entity, define a TypeScript class with the appropriate decorators. Decorators like `@Entity()`, `@Column()`, and others help you define the structure of your database tables and columns. Here's an example:
 
 ```typescript
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 class User {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
-  username: string;
+  username: string
 
   // ... other columns and relationships
 }
@@ -174,9 +166,9 @@ class User {
 Repositories are used to interact with your entities and perform database operations. To create a repository, you'll use the `getRepository` function provided by TypeORM:
 
 ```typescript
-import { getRepository } from 'typeorm';
+import { getRepository } from 'typeorm'
 
-const userRepository = getRepository(User);
+const userRepository = getRepository(User)
 ```
 
 ### Inserting Data
@@ -184,8 +176,8 @@ const userRepository = getRepository(User);
 Inserting data into the database is straightforward. Use the repository's `save` method to create new records:
 
 ```typescript
-const newUser = userRepository.create({ username: 'example' });
-await userRepository.save(newUser);
+const newUser = userRepository.create({ username: 'example' })
+await userRepository.save(newUser)
 ```
 
 ### Querying Data
@@ -196,7 +188,7 @@ TypeORM provides a rich query builder that lets you construct complex queries in
 const usersWithUsername = await userRepository
   .createQueryBuilder('user')
   .where('user.username = :username', { username: 'example' })
-  .getMany();
+  .getMany()
 ```
 
 ### Updating Data
@@ -204,9 +196,9 @@ const usersWithUsername = await userRepository
 Updating data is as simple as fetching a record, modifying it, and saving it back:
 
 ```typescript
-const userToUpdate = await userRepository.findOne({ id: 1 });
-userToUpdate.username = 'new-username';
-await userRepository.save(userToUpdate);
+const userToUpdate = await userRepository.findOne({ id: 1 })
+userToUpdate.username = 'new-username'
+await userRepository.save(userToUpdate)
 ```
 
 ### Deleting Data
@@ -214,12 +206,10 @@ await userRepository.save(userToUpdate);
 Deleting records is also straightforward:
 
 ```typescript
-await userRepository.delete({ id: 1 });
+await userRepository.delete({ id: 1 })
 ```
 
 These are just a few basic examples of how you can use TypeORM in your project. Dive into the [TypeORM documentation](https://typeorm.io/) for more advanced features, such as relationships, migrations, transactions, and custom queries. TypeORM's intuitive API will help you handle complex database interactions with ease.
-
-
 
 ## Configuration
 
@@ -277,9 +267,6 @@ Remember to securely manage sensitive information such as database credentials. 
 
 Once your configuration is set up, you're ready to start using TypeORM to interact with your database. Enjoy the power and simplicity of TypeORM's database management capabilities!
 
-
-
-
 ## Database Setup
 
 Before you start working with your application's data using TypeORM, you'll need to set up the database. This involves creating the necessary database, defining its schema, and configuring your TypeORM entities to match.
@@ -314,15 +301,15 @@ Your entities define the structure of your database tables and their relationshi
 For example, if you have a `User` entity:
 
 ```typescript
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 class User {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
-  username: string;
+  username: string
 
   // ... other columns and relationships
 }
@@ -349,8 +336,6 @@ With your database set up, configurations in place, and entity definitions ready
 
 Remember that while TypeORM streamlines the process, it's essential to have a solid understanding of your database schema and design to ensure your application's data integrity and performance.
 
-
-
 ## Models
 
 Models in TypeORM are represented by TypeScript classes that define the structure of your database tables. Each model maps to a table, and its properties represent columns. Models can also include relationships with other models.
@@ -360,18 +345,18 @@ Models in TypeORM are represented by TypeScript classes that define the structur
 To create a model, define a TypeScript class and decorate it with the appropriate TypeORM decorators. For example, let's create a simple `Product` model:
 
 ```typescript
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 
 @Entity()
 class Product {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
-  name: string;
+  name: string
 
   @Column()
-  price: number;
+  price: number
 }
 ```
 
@@ -382,22 +367,22 @@ In this example, the `@Entity()` decorator marks the class as an entity, while `
 TypeORM makes it easy to define relationships between models. Consider a scenario where a `Product` belongs to a `Category`:
 
 ```typescript
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { Category } from './Category'; // Import the related model
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Category } from './Category' // Import the related model
 
 @Entity()
 class Product {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
-  name: string;
+  name: string
 
   @Column()
-  price: number;
+  price: number
 
-  @ManyToOne(() => Category, category => category.products)
-  category: Category;
+  @ManyToOne(() => Category, (category) => category.products)
+  category: Category
 }
 ```
 
@@ -408,12 +393,12 @@ In this example, the `@ManyToOne()` decorator establishes a many-to-one relation
 TypeORM also supports inheritance, allowing you to create base classes and extend them for specific models. Here's a simplified example:
 
 ```typescript
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 
 @Entity()
 class BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   // ... common columns or properties
 }
@@ -421,7 +406,7 @@ class BaseEntity {
 @Entity()
 class User extends BaseEntity {
   @Column()
-  username: string;
+  username: string
 
   // ... other user-specific columns
 }
@@ -435,8 +420,6 @@ Models offer a plethora of advanced options and decorators for defining indexes,
 
 With models, you define the blueprint of your database tables and their relationships. TypeORM's intuitive syntax and decorators enable you to effortlessly map your application's data structures to the database schema.
 
-
-
 ## Repositories
 
 Repositories in TypeORM provide a structured and efficient way to interact with your database entities. They encapsulate database operations and allow you to perform Create, Read, Update, and Delete (CRUD) actions as well as more advanced queries.
@@ -446,9 +429,9 @@ Repositories in TypeORM provide a structured and efficient way to interact with 
 To create a repository, use the `getRepository` function provided by TypeORM. For instance, if you have a `User` entity:
 
 ```typescript
-import { getRepository } from 'typeorm';
+import { getRepository } from 'typeorm'
 
-const userRepository = getRepository(User);
+const userRepository = getRepository(User)
 ```
 
 ### Basic CRUD Operations
@@ -457,19 +440,19 @@ Repositories make basic CRUD operations a breeze. Here are some examples:
 
 ```typescript
 // Creating a new user
-const newUser = userRepository.create({ username: 'example' });
-await userRepository.save(newUser);
+const newUser = userRepository.create({ username: 'example' })
+await userRepository.save(newUser)
 
 // Finding users
-const users = await userRepository.find();
+const users = await userRepository.find()
 
 // Updating a user
-const userToUpdate = await userRepository.findOne({ id: 1 });
-userToUpdate.username = 'new-username';
-await userRepository.save(userToUpdate);
+const userToUpdate = await userRepository.findOne({ id: 1 })
+userToUpdate.username = 'new-username'
+await userRepository.save(userToUpdate)
 
 // Deleting a user
-await userRepository.delete({ id: 1 });
+await userRepository.delete({ id: 1 })
 ```
 
 ### Custom Queries
@@ -480,7 +463,7 @@ TypeORM's query builder empowers you to create complex queries programmatically.
 const usersWithRole = await userRepository
   .createQueryBuilder('user')
   .where('user.role = :role', { role: 'admin' })
-  .getMany();
+  .getMany()
 ```
 
 ### Transactions
@@ -488,10 +471,12 @@ const usersWithRole = await userRepository
 Repositories support transactions, ensuring that a series of operations either all succeed or none do. Here's a basic example:
 
 ```typescript
-await getManager().transaction(async transactionalEntityManager => {
-  await transactionalEntityManager.save(User, newUser);
-  await transactionalEntityManager.update(User, 2, { username: 'updated-username' });
-});
+await getManager().transaction(async (transactionalEntityManager) => {
+  await transactionalEntityManager.save(User, newUser)
+  await transactionalEntityManager.update(User, 2, {
+    username: 'updated-username',
+  })
+})
 ```
 
 ### More Repository Methods
@@ -501,7 +486,6 @@ TypeORM repositories offer a variety of methods for querying, updating, and dele
 Repositories streamline your database interactions, providing a structured approach to managing your application's data. Whether you're performing basic CRUD operations or crafting intricate queries, repositories are your tool of choice for efficient database access.
 
 Certainly, here's a "Migrations" section for your TypeORM README:
-
 
 ## Migrations
 
@@ -552,7 +536,7 @@ Migrations can also include seed data for your database. Add seed data using the
 ```typescript
 export class SeedData1597622074505 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(/* SQL queries for inserting seed data */);
+    await queryRunner.query(/* SQL queries for inserting seed data */)
   }
 
   // ... other methods
@@ -564,7 +548,6 @@ export class SeedData1597622074505 implements MigrationInterface {
 If you prefer programmatic control over migrations, you can use TypeORM's API to create, run, and manage migrations. Refer to the [TypeORM Migrations API](https://typeorm.io/#/migrations-api) documentation for detailed guidance.
 
 Migrations are a critical tool for maintaining your database's integrity as your application evolves. TypeORM's migration feature simplifies the process, ensuring that your database schema changes are handled seamlessly.
-
 
 ## Seed Data
 
@@ -586,7 +569,7 @@ export class SeedData1628198266520 implements MigrationInterface {
       INSERT INTO users (username, email) VALUES ('user1', 'user1@example.com');
       INSERT INTO users (username, email) VALUES ('user2', 'user2@example.com');
       -- ... more seed data
-    `);
+    `)
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
@@ -608,23 +591,26 @@ Another approach is to create a separate seeder script that populates the databa
 1. **Create a Seeder Script:** In a designated script (e.g., `seed.ts`), use your repositories to insert seed data:
 
 ```typescript
-import { createConnection } from 'typeorm';
-import { User } from './entities/User'; // Import your entity classes
+import { createConnection } from 'typeorm'
+import { User } from './entities/User' // Import your entity classes
 
 async function seed() {
-  const connection = await createConnection();
+  const connection = await createConnection()
 
-  const userRepo = connection.getRepository(User);
+  const userRepo = connection.getRepository(User)
 
-  const newUser = userRepo.create({ username: 'seeded-user', email: 'seeded@example.com' });
-  await userRepo.save(newUser);
+  const newUser = userRepo.create({
+    username: 'seeded-user',
+    email: 'seeded@example.com',
+  })
+  await userRepo.save(newUser)
 
   // ... insert more seed data
 }
 
 seed()
   .then(() => console.log('Seeding complete!'))
-  .catch(error => console.error('Seeding error:', error));
+  .catch((error) => console.error('Seeding error:', error))
 ```
 
 2. **Run the Seeder Script:** Execute the seeder script to populate the database:
@@ -641,8 +627,6 @@ ts-node seed.ts
 
 Seed data ensures that your database starts with relevant records, making it easier to develop and test your application. Choose the approach that best suits your needs and maintain your seed data alongside your project's evolution.
 
-
-
 ## Queries
 
 TypeORM's powerful query builder allows you to construct complex SQL queries in a programmatic, type-safe manner. This section will introduce you to some essential query-building techniques.
@@ -652,15 +636,15 @@ TypeORM's powerful query builder allows you to construct complex SQL queries in 
 Here's how you can use the query builder to fetch data from the database:
 
 ```typescript
-import { getRepository } from 'typeorm';
+import { getRepository } from 'typeorm'
 
-const userRepository = getRepository(User);
+const userRepository = getRepository(User)
 
 const users = await userRepository
   .createQueryBuilder('user')
   .where('user.age > :age', { age: 25 })
   .orderBy('user.username', 'ASC')
-  .getMany();
+  .getMany()
 ```
 
 In this example, we retrieve users older than 25 and order them by username.
@@ -673,7 +657,7 @@ TypeORM makes joining tables intuitive:
 const usersWithRoles = await userRepository
   .createQueryBuilder('user')
   .leftJoinAndSelect('user.roles', 'role')
-  .getMany();
+  .getMany()
 ```
 
 This query fetches users along with their associated roles.
@@ -686,7 +670,7 @@ You can perform aggregations like counting, summing, or averaging:
 const userCount = await userRepository
   .createQueryBuilder('user')
   .select('COUNT(user.id)', 'count')
-  .getRawOne();
+  .getRawOne()
 ```
 
 This query returns the count of users.
@@ -700,7 +684,7 @@ const highSpendingUsers = await userRepository
   .createQueryBuilder('user')
   .where(`user.id IN (${subQuery.getQuery()})`)
   .setParameter('maxSpending', 1000)
-  .getMany();
+  .getMany()
 ```
 
 Here, `subQuery` is a separate query that fetches user IDs with high spending.
@@ -710,10 +694,10 @@ Here, `subQuery` is a separate query that fetches user IDs with high spending.
 Wrap multiple queries in a transaction for atomicity:
 
 ```typescript
-await getManager().transaction(async transactionalEntityManager => {
-  await transactionalEntityManager.save(User, newUser);
-  await transactionalEntityManager.delete(User, { id: 2 });
-});
+await getManager().transaction(async (transactionalEntityManager) => {
+  await transactionalEntityManager.save(User, newUser)
+  await transactionalEntityManager.delete(User, { id: 2 })
+})
 ```
 
 ### More Query Building
@@ -721,7 +705,6 @@ await getManager().transaction(async transactionalEntityManager => {
 These are just a few examples of what you can achieve with TypeORM's query builder. Explore the [TypeORM Query Builder](https://typeorm.io/#/select-query-builder) documentation for more methods and advanced techniques.
 
 TypeORM's query builder gives you the tools to construct sophisticated queries while maintaining strong typing and code readability. Whether you need simple data retrieval or complex aggregations, the query builder has you covered.
-
 
 ## Advanced Tips
 
@@ -732,10 +715,10 @@ As you become more comfortable with TypeORM, consider these advanced tips to enh
 Transactions ensure the atomicity of a series of database operations. Wrap related operations in a transaction to guarantee that they all succeed or fail together:
 
 ```typescript
-await getManager().transaction(async transactionalEntityManager => {
-  await transactionalEntityManager.save(User, newUser);
-  await transactionalEntityManager.delete(User, { id: 2 });
-});
+await getManager().transaction(async (transactionalEntityManager) => {
+  await transactionalEntityManager.save(User, newUser)
+  await transactionalEntityManager.delete(User, { id: 2 })
+})
 ```
 
 ### 2. Utilize Caching
@@ -746,8 +729,8 @@ TypeORM supports caching, reducing the need to hit the database frequently. Conf
 await userRepository.find({
   cache: true,
   cacheId: 'my-cache-key',
-  cacheTime: 60000 // Cache expiration time in milliseconds
-});
+  cacheTime: 60000, // Cache expiration time in milliseconds
+})
 ```
 
 ### 3. Optimize Queries
@@ -759,12 +742,12 @@ Leverage TypeORM's query builder to construct efficient queries. Use indexing, l
 For handling large datasets, consider pagination and filtering. Use the `take` and `skip` methods to implement pagination:
 
 ```typescript
-const pageSize = 10;
-const pageNumber = 2;
+const pageSize = 10
+const pageNumber = 2
 const users = await userRepository.find({
   take: pageSize,
-  skip: pageSize * (pageNumber - 1)
-});
+  skip: pageSize * (pageNumber - 1),
+})
 ```
 
 ### 5. Migrations and Continuous Integration
@@ -783,7 +766,9 @@ For tasks beyond simple schema changes, create migration scripts that modify dat
 ```typescript
 export class DataMigration1597622074505 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query('UPDATE users SET active = true WHERE lastLogin > NOW() - INTERVAL 6 MONTH');
+    await queryRunner.query(
+      'UPDATE users SET active = true WHERE lastLogin > NOW() - INTERVAL 6 MONTH'
+    )
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
@@ -799,7 +784,6 @@ TypeORM is an open-source project with an active community. Contribute to the pr
 Remember that while these advanced tips can enhance your TypeORM experience, it's essential to evaluate your application's specific needs and context before implementing them.
 
 Stay curious and keep exploring TypeORM's capabilities to build robust and performant database-driven applications!
-
 
 ## Contributing
 
@@ -851,19 +835,18 @@ Your contributions can help improve TypeORM for everyone, making it a more robus
 
 Thank you for considering contributing to TypeORM. Your efforts are instrumental in shaping the project's future and making it even more valuable to the development community!
 
-
 ## Authors
 
 TypeORM is a collaborative effort made possible by contributions from individuals around the world. Here are some of the authors who have played a significant role in developing and maintaining the project:
 
 - **Sami Islam** - Lead Developer - [GitHub](https://github.com/sami12344)
 
-
 A special thank you to all the contributors who have helped shape TypeORM into the powerful tool it is today. If you've contributed to TypeORM and would like to be recognized, please feel free to add your name and contribution details here.
 
 For the most up-to-date list of contributors, refer to the [GitHub Contributors](https://github.com/typeorm/typeorm/graphs/contributors) page.
 
 We deeply appreciate the time and effort put into enhancing TypeORM and making it better with each release!
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -885,4 +868,3 @@ The above copyright notice and this permission notice shall be included in all c
 ---
 
 By using, contributing to, or distributing this software, you agree to abide by the terms of the MIT License.
-
